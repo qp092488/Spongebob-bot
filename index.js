@@ -67,7 +67,7 @@ client.on('message', (message) => {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 스펀지밥', helpImg)
+      .setAuthor('스펀지밥 명령어', helpImg)
       .setColor('#186de6')
       .setFooter(`스펀지밥`)
       .setTimestamp()
