@@ -54,7 +54,7 @@ client.on('message', (message) => {
       .addField('좋아하는 것', '뚱이\n해파리사냥\n월요일\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('동현이가 만듬', img)
+      .setFooter('동현이가 만듦', img)
 
     message.channel.send(embed)
   } else if(message.content == '<명령어') {
