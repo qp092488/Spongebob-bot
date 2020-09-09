@@ -49,7 +49,7 @@ client.on('message', (message) => {
       .addField('나이', '34살', true)
       .addField('성별', '남성', true)
       .addField('직업', '요리사', true)
-      .addField('좋아하는 것', '뚱이\n해리사냥\n월요일\n')
+      .addField('좋아하는 것', '뚱이\n해파리사냥\n월요일\n')
       .addBlankField()
       .setTimestamp()
       .setFooter('동현이가 만듬', img)
