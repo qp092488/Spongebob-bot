@@ -62,8 +62,6 @@ client.on('message', (message) => {
     let commandList = [
       {name: 'ping', desc: '현재 핑 상태'},
       {name: '<프로필', desc: '프로필 설명'},
-      {name: 'embed', desc: 'embed 예제1'},
-      {name: 'embed2', desc: 'embed 예제2 (help)'},
       {name: '<전체공지', desc: 'dm으로 전체 공지 보내기'},
       {name: '<청소', desc: '텍스트 지움'},
     ];
