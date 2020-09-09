@@ -52,7 +52,7 @@ client.on('message', (message) => {
       .addField('좋아하는 것', '뚱이\n해파리사냥\n월요일\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('동현이가 만듬', img)
+      .setFooter('동현이가 만듦', img)
     message.channel.send(embed)
   } else if(message.content == 'embed2') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
@@ -99,8 +99,8 @@ client.on('message', (message) => {
     var clearLine = message.content.slice('<청소 '.length);
     var isNum = !isNaN(clearLine)
 
-    if(isNum && (clearLine <= 0 || 99 < clearLine)) {
-      message.channel.send("1부터 99까지의 숫자만 입력해주세요.")
+    if(isNum && (clearLine <= 0 || 100 < clearLine)) {
+      message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
       return;
     } else if(!isNum) { // c @나긋해 3
       if(message.content.split('<@').length == 2) {
@@ -160,4 +160,4 @@ async function AutoMsgDelete(message, str, delay = 3000) {
 }
 
 
-client.login(token);
+client.login(token); 
