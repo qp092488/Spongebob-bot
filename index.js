@@ -9,7 +9,7 @@ const byeChannelComment = "잘가 친구";
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setPresence({ game: { name: '띵콩땅콩' }, status: 'online' })
+  client.user.setPresence({ game: { name: '<명령어' }, status: 'online' })
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -57,16 +57,17 @@ client.on('message', (message) => {
       .setFooter('동현이가 만듬', img)
 
     message.channel.send(embed)
-  } else if(message.content == 'help') {
+  } else if(message.content == '<명령어') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
       {name: 'ping', desc: '현재 핑 상태'},
+      {name: '<프로필', desc: '프로필 설명'},
       {name: 'embed', desc: 'embed 예제1'},
       {name: 'embed2', desc: 'embed 예제2 (help)'},
-      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
-      {name: '!청소', desc: '텍스트 지움'},
+      {name: '<전체공지', desc: 'dm으로 전체 공지 보내기'},
+      {name: '<청소', desc: '텍스트 지움'},
     ];
-    let commandStr = '<ㅁㅁ';
+    let commandStr = '';
     let embed = new Discord.RichEmbed()
       .setAuthor('Help of 스펀지밥', helpImg)
       .setColor('#186de6')
