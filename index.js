@@ -6,8 +6,10 @@ const byeChannelName = "💬채팅";
 const welcomeChannelComment = "친구야 안녕 내 이름은 스펀지밥이야 ";
 const byeChannelComment = "잘가 친구";
 
+
 client.on('ready', () => {
   console.log('켰다.');
+  client.user.setPresence({ game: { name: '<help를 쳐보세요.' }, status: 'online' })
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -52,15 +54,17 @@ client.on('message', (message) => {
       .addField('좋아하는 것', '뚱이\n해파리사냥\n월요일\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('동현이가 만듦', img)
+      .setFooter('동현이가 만듬', img)
+
     message.channel.send(embed)
-  } else if(message.content == 'embed2') {
+  } else if(message.content == 'help') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
-      {name: '<핑', desc: '현재 핑 상태'},
+      {name: 'ping', desc: '현재 핑 상태'},
       {name: 'embed', desc: 'embed 예제1'},
       {name: 'embed2', desc: 'embed 예제2 (help)'},
-      {name: '<전체공지', desc: 'dm으로 전체 공지 보내기'},
+      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
+      {name: '!청소', desc: '텍스트 지움'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
@@ -99,8 +103,8 @@ client.on('message', (message) => {
     var clearLine = message.content.slice('<청소 '.length);
     var isNum = !isNaN(clearLine)
 
-    if(isNum && (clearLine <= 0 || 100 < clearLine)) {
-      message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
+    if(isNum && (clearLine <= 0 || 99 < clearLine)) {
+      message.channel.send("1부터 99까지의 숫자만 입력해주세요.")
       return;
     } else if(!isNum) { // c @나긋해 3
       if(message.content.split('<@').length == 2) {
@@ -132,7 +136,7 @@ client.on('message', (message) => {
 });
 
 function checkPermission(message) {
-  if(!message.member.hasPermission("MAGAGE_MESSAGES")) {
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
     message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
     return true;
   } else {
@@ -160,4 +164,4 @@ async function AutoMsgDelete(message, str, delay = 3000) {
 }
 
 
-client.login(token); 
+client.login(token);
