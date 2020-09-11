@@ -35,12 +35,13 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == '띵') {
-    return message.reply('콩');
+  if(message.content == '도발') {
+    return message.reply('너는 땅콩');
   }
-  if(message.content == '땅') {
-    return message.reply('콩');
-  } 
+  if(message.content == '웃음') {
+    return message.reply('히히히히');
+  }
+
 
   if(message.content == '<서버정보') {
     let embed = new Discord.RichEmbed()
