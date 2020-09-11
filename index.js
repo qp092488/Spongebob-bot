@@ -66,7 +66,7 @@ client.on('message', (message) => {
       list += `${arr[i].name}\n`
     }
     list += `\`\`\`\n`
-    embed.addField('list:띵콩땅콩',        `${list}`);
+    embed.addField('list:',`${list}`);
 
     embed.setTimestamp()
     message.channel.send(embed);
