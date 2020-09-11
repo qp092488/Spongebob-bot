@@ -43,7 +43,7 @@ client.on('message', (message) => {
 
   if(message.content == '<서버정보') {
     let embed = new Discord.RichEmbed()
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let img = 'https://cdn.discordapp.com/attachments/751248598741811464/752855632788324372/ddd.jpg';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
     embed.setColor('#186de6')
     embed.setAuthor('스펀지밥', img)
@@ -66,6 +66,7 @@ client.on('message', (message) => {
       list += `${arr[i].name}\n`
     }
     list += `\`\`\`\n`
+    embed.addField('list:띵콩땅콩',        `${list}`);
 
     embed.setTimestamp()
     message.channel.send(embed);
