@@ -35,8 +35,8 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == '...') {
-    return message.reply('이걸 찾네');
+  if(message.content == '석태훈') {
+    return message.reply('걔는 우르곳');
   }
 
 
