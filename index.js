@@ -35,8 +35,8 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == '민트초코') {
-    return message.reply('맛있어');
+  if(message.content == '20150624') {
+    return message.reply('메리생일');
   }
 
 
